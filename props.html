@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Copper Run - Props</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #0a0a0a;
+            color: #e8e8e8;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('IMG_9786.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(transparent, #0a0a0a);
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 0.3rem;
+            color: #d4a574;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-shadow: 4px 4px 20px rgba(0,0,0,0.9);
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #c9c9c9;
+            font-style: italic;
+            letter-spacing: 0.2rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 6rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #d4a574;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .prop-card {
+            background: #141414;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid #d4a574;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        .prop-name {
+            font-size: 2.5rem;
+            color: #d4a574;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .prop-category {
+            font-size: 1rem;
+            color: #999;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .prop-text {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #c9c9c9;
+            text-align: center;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: #d4a574;
+            margin: 2rem auto;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .back-link a {
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+            border: 2px solid #d4a574;
+            padding: 1rem 2rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background: #d4a574;
+            color: #0a0a0a;
+        }
+
+        footer {
+            background: #000;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 2px solid #d4a574;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1 class="title">Props</h1>
+        <p class="subtitle">The Last Copper Run</p>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">Hero Props</h2>
+
+            <div class="prop-card">
+                <h3 class="prop-name">The Copper Still</h3>
+                <p class="prop-category">Hero Prop - Central Object</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">The masterwork. Fifty pounds of hand-hammered copper coils, joints, and chambers. Fourth-generation craftsmanship. Gleams like burnished gold in lamplight. Must look functional, beautiful, and worth dying for. Birdie carries it strapped to her back for sixty miles. The physical and emotional weight of the entire story. Multiple versions needed: full weight for wide shots, lightweight rubber replica for extended carrying scenes, hero prop for close-ups showing detail and patina.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Abel's Leather Pouch</h3>
+                <p class="prop-category">Hero Prop - Story Device</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Worn leather pouch containing forty-three dollars. Abel throws it to Birdie in the opening raid—his final gift. She carries it throughout her journey. Contains crumpled bills, a few coins, a folded photograph of young Ruth and Abel, and Tommy's ring. The pouch represents her father's last act of love and the inadequate price of survival.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Mason Jars of Moonshine</h3>
+                <p class="prop-category">Hero Prop - Visual Motif</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Clear glass mason jars filled with crystal-clear moonshine. Abel tests them with blue flame in opening sequence. Throughout film, we see jars being filled, tested, transported, smashed. The liquid catches light beautifully—looks like water, burns like fire. Some jars should show copper staining on the glass. Practical liquid needed for pouring and flame tests.</p>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Weapons & Tools</h2>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Abel's Rifle</h3>
+                <p class="prop-category">Period Firearm</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Winchester Model 1894 lever-action rifle. Well-worn, functional-looking. Abel uses it to defend the still house before his death. Birdie briefly considers taking it, then leaves it behind—refusing to continue her father's war. Must be period-accurate, with visible wear showing years of mountain use.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Federal Agent Pistols</h3>
+                <p class="prop-category">Period Firearms</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Colt M1911 pistols carried by Beck and his agents. Standard federal law enforcement sidearm of the era. Dark metal, government issue. Beck's pistol should show holster wear. Used in opening raid and pursuit sequences. Multiple functional replicas needed for ensemble cast.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Shaw's Shotgun</h3>
+                <p class="prop-category">Period Firearm</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Double-barreled 12-gauge shotgun. Virgil Shaw carries it during the ambush sequence. Sawed-off barrels suggesting illegal modification. Represents bootlegger brutality versus the McCallister craftsmanship ethic. Heavy, menacing presence.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Copper Working Tools</h3>
+                <p class="prop-category">Craftsman Tools</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Period copper-working implements: hammers with wooden handles, tin snips, soldering irons, measuring instruments. Abel uses these in memory sequences. Show copper staining, wear from generations of use. Tools should convey craftsmanship, artistry, generational knowledge. Displayed in still house during opening sequence.</p>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Personal Items</h2>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Ruth's Quilt</h3>
+                <p class="prop-category">Set Dressing/Prop</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Handmade patchwork quilt covering Ruth as she dies. Faded colors, worn fabric, evidence of decades of mountain life. Birdie wraps herself in it after her mother's death. Left behind when she departs. Represents family warmth, maternal protection, the home she's leaving forever.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Tommy's Photograph</h3>
+                <p class="prop-category">Personal Prop</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Small sepia-toned photograph of Tommy. Young, smiling, alive. Birdie carries it in Abel's pouch. We see it once—when she shows Beck what government poison took from her. Creased from being carried, water-stained from river crossing. Must convey lost future, stolen life.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Birdie's Coat</h3>
+                <p class="prop-category">Costume/Prop</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Heavy wool coat, dark color, patched and mended. She wraps the copper still in it during river crossing. Gets soaked, bloodstained, torn. By film's end it's destroyed—visual evidence of her ordeal. Multiple versions needed showing progressive damage.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Beck's Badge</h3>
+                <p class="prop-category">Federal Identification</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Federal Prohibition Agent badge. Polished metal, government seal. Beck pins it on at the beginning—symbol of authority and righteousness. By his death, it's tarnished, blood-spattered. Represents failed moral certainty. Close-up detail needed for symbolic weight.</p>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Set Dressing Props</h2>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Wooden Barrels</h3>
+                <p class="prop-category">Set Dressing</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Oak barrels for aging whiskey. Various sizes. Copper-stained interiors. Some intact, some shattered by federal agents during raid. Should smell of wood and alcohol. Represent mountain economy, traditional craft, destroyed livelihood.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Oil Lamps</h3>
+                <p class="prop-category">Practical Lighting</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Period oil lamps providing light in still house and cabin. Glass chimneys, metal bases, functional wicks. Light sources create warm glow in dark mountain interiors. Practical lighting used throughout—flickering flames add atmosphere and period authenticity.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Federal Evidence Tags</h3>
+                <p class="prop-category">Set Dressing</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Paper tags used by federal agents to mark confiscated moonshine equipment. Official government printing. Agents attach them during raid sequence. Represent bureaucratic violence—reducing craft and tradition to evidence numbers.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Period Currency</h3>
+                <p class="prop-category">Set Dressing/Prop</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">1920s U.S. currency. Bills and coins. Abel's forty-three dollars. The two hundred dollars Jack Price pays Birdie. Worn, crumpled. Money represents survival, escape, and the inadequate price placed on human life. Period-accurate reproduction currency.</p>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Specialty Props</h2>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Train Ticket</h3>
+                <p class="prop-category">Story Device</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Railroad ticket from Knoxville heading west. Period printing, date stamp, destination unclear. Birdie purchases it with money from selling the copper. Final image: her hand holding the ticket, mountains disappearing behind the train. Represents escape, new beginning, freedom from legacy.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Medical Supplies</h3>
+                <p class="prop-category">Period Medical</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">1920s medical supplies for Beck's deteriorating condition. Bandages, iodine, morphine ampules in wooden case. His agents attempt treatment as infection spreads. Represents inadequacy of authority—even government power can't save Beck from consequence of violence.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Ruth's Ashes</h3>
+                <p class="prop-category">Epilogue Prop</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Simple container holding Ruth's ashes. Thirty years after her death, older Birdie and her daughter scatter them on mountain ridge. Practical ash effect needed for scattering scene. Represents completion of circle, honoring past while choosing future.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Rope & Pack Rigging</h3>
+                <p class="prop-category">Practical Prop</p>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Hemp rope and leather straps used to secure copper still to Birdie's back. Period-appropriate materials. Must be functional enough to actually carry weight during filming. Shows wear throughout journey—fraying, breaking, being re-tied. Physical evidence of impossible burden.</p>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Prop Notes</h2>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Historical Accuracy</h3>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">All props must reflect 1928 Appalachia—economic depression, rural poverty, Prohibition era. Nothing should look new. Everything shows wear, repair, generational use. Copper items especially should show patina, staining, evidence of craft. Weapons must be period-accurate models.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">The Copper Still - Special Considerations</h3>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">This is the most important prop in the film. Requires multiple versions: full-weight hero prop (50 lbs actual copper), lightweight stunt double (foam/rubber painted copper), detailed insert prop for close-ups. Must look functional—viewers should believe it could actually distill moonshine. Copper should gleam but also show tooling marks, solder joints, evidence of handcraft. This object must justify everything Birdie endures.</p>
+            </div>
+
+            <div class="prop-card">
+                <h3 class="prop-name">Progressive Damage</h3>
+
+                <div class="divider"></div>
+
+                <p class="prop-text">Many props need multiple versions showing progressive wear and damage: Birdie's coat, the rope rigging, Beck's clothing and bandages, even the copper still itself (dented from river crossing). Track continuity carefully—visual evidence of journey's physical toll.</p>
+            </div>
+
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← Back to Treatment</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2 style="color: #d4a574; font-size: 2rem; margin-bottom: 1rem;">THE LAST COPPER RUN</h2>
+            <p style="color: #999; font-size: 1.1rem;">Props</p>
+            <p style="color: #666; margin-top: 2rem;">Written by Ayla Demirci</p>
+            <p style="color: #666;">Nashville, Tennessee</p>
+            <p style="color: #666;">WGAe #I381209</p>
+            <p style="color: #666; margin-top: 2rem;">Contact: Aylamahree@Gmail.com | (615)485-5008</p>
+        </div>
+    </footer>
+
+</body>
+</html>
