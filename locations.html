@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Copper Run - Locations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #0a0a0a;
+            color: #e8e8e8;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('IMG_5896.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(transparent, #0a0a0a);
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 0.3rem;
+            color: #d4a574;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-shadow: 4px 4px 20px rgba(0,0,0,0.9);
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #c9c9c9;
+            font-style: italic;
+            letter-spacing: 0.2rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 6rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #d4a574;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .location-card {
+            background: #141414;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid #d4a574;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        .location-name {
+            font-size: 2.5rem;
+            color: #d4a574;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .location-type {
+            font-size: 1rem;
+            color: #999;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .location-text {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #c9c9c9;
+            text-align: center;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: #d4a574;
+            margin: 2rem auto;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .back-link a {
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+            border: 2px solid #d4a574;
+            padding: 1rem 2rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background: #d4a574;
+            color: #0a0a0a;
+        }
+
+        footer {
+            background: #000;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 2px solid #d4a574;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1 class="title">Locations</h1>
+        <p class="subtitle">The Last Copper Run</p>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">Primary Filming Locations</h2>
+
+            <div class="location-card">
+                <h3 class="location-name">McCallister Still House</h3>
+                <p class="location-type">Interior/Exterior - Mountain Hollow</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Hidden deep in a forested hollow. Ramshackle wooden structure camouflaged with branches and moss. Interior: copper stills gleaming in lamplight, wooden barrels, steam rising. The heart of the McCallister operation. Opening raid sequence. Abel's last stand. Needs to feel both sacred workshop and doomed fortress.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">McCallister Cabin</h3>
+                <p class="location-type">Interior/Exterior - Remote Mountain</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Weathered log cabin. Two rooms. Ruth dying in dim lamplight. Sparse furnishings, evidence of hard mountain life. Birdie's childhood home. The place she must leave behind. Needs isolation, poverty, and fading warmth of family history.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">The Hidden Cave</h3>
+                <p class="location-type">Interior - Mountain Cave System</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Where the masterwork copper still is hidden. Narrow entrance concealed by rockfall. Interior opens to larger chamber. The copper gleams in darkness. Birdie retrieves it here, straps fifty pounds to her back. Cave represents both treasure vault and tomb of the old life.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Ridge Trails</h3>
+                <p class="location-type">Exterior - Great Smoky Mountains</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Mountain ridgelines stretching for miles. Narrow paths through fog and forest. Birdie navigates by ridge lines, creek sounds, moss on trees. Day one and two of journey. Needs vast, indifferent beauty. Ridge after ridge disappearing into mist. The weight of distance made visible.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Nolichucky River Crossing</h3>
+                <p class="location-type">Exterior - River</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Fast-running mountain river. Cold, dangerous current. Birdie strips to underclothes, wraps copper in coat, wades in. Nearly drowns when copper pulls her under. Shallow rocks save her. Day two morning. Needs to feel brutal, unforgiving. Nature as obstacle, not backdrop.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Abandoned Homestead</h3>
+                <p class="location-type">Interior/Exterior - Mountain Valley</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Collapsed roof, broken chimney, overgrown yard. Birdie hides here from federal agents. Sleeps in chimney. Beck's men search but miss her. Day two evening. Represents the many families destroyed by Prohibition, economic collapse, government violence.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Mountain Road</h3>
+                <p class="location-type">Exterior - Dirt Road</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Rutted dirt road through forest. Birdie encounters Wyatt Shaw here. He warns her of his father's ambush. Brief moment of humanity. Day three dawn. Road represents the choice between paths—continue toward danger or turn back.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Shaw Ambush Site</h3>
+                <p class="location-type">Exterior - Knoxville Outskirts</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Clearing near a barn. Virgil Shaw and his men waiting. Birdie spotted. Confrontation. She refuses to surrender copper. Runs. Bullets chase her into river. Day three morning. Needs tactical geography—open ground with escape route to water.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">River Bank - Beck's Death</h3>
+                <p class="location-type">Exterior - Riverside</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Quiet stretch of river. Beck dying from infection. Final confrontation with Birdie. She tells him about Tommy. He breaks. Admits the poisoning policy murdered innocents. Dies remembering their names. Day three morning. Needs stillness after violence. Water, rocks, morning light.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Jack Price's Warehouse</h3>
+                <p class="location-type">Interior - Knoxville</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Urban warehouse district. Brick building. Interior: whiskey barrels, crates, urban bootlegging operation. Jack Price in suit, smoking cigar. Birdie delivers copper. He pays two hundred dollars, asks no questions about blood. Day three afternoon. Urban contrast to mountain wilderness.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Train Station</h3>
+                <p class="location-type">Exterior/Interior - Knoxville</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">1928 railroad station. Birdie buys ticket west. Stands on platform. Looks back toward mountains. Leaves everything behind. Day three evening. Station represents departure, new beginning, escape from cycle of violence.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Mountain Ridge - Epilogue</h3>
+                <p class="location-type">Exterior - Great Smoky Mountains</p>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Thirty years later. Same mountains, different Birdie. Older Birdie and her grown daughter scatter Ruth's ashes. Sunset over ridges—orange, gold, fading purple. Mountains watch. Silent. Eternal. Indifferent. Final image: two women walking down mountain together. Full circle.</p>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Location Notes</h2>
+
+            <div class="location-card">
+                <h3 class="location-name">Visual Approach</h3>
+
+                <div class="divider"></div>
+
+                <p class="location-text">The mountains are beautiful, brutal, and indifferent. Not romanticized. Fog, darkness, cold. Natural sound design—wind, water, forest sounds. Minimal score. Camera stays intimate during journey, opens up for establishing shots. Colors: cold blues, copper oranges, charcoal blacks.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Practical Considerations</h3>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Great Smoky Mountains National Park or similar Appalachian locations. Period-appropriate structures (existing historical buildings or built sets). River crossing requires stunt coordination, safety protocols. Night exteriors, fog machines, practical lighting. Weather-dependent exterior shoots.</p>
+            </div>
+
+            <div class="location-card">
+                <h3 class="location-name">Emotional Geography</h3>
+
+                <div class="divider"></div>
+
+                <p class="location-text">Locations mirror Birdie's internal journey. Still house (heritage/past). Cave (burden/duty). Mountain trails (struggle/isolation). River (transformation/baptism). Abandoned homestead (what's lost). Shaw ambush (violence of men). Beck's death (reckoning). Warehouse (transaction/closure). Train station (escape/future). Epilogue ridge (peace/resolution).</p>
+            </div>
+
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← Back to Treatment</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2 style="color: #d4a574; font-size: 2rem; margin-bottom: 1rem;">THE LAST COPPER RUN</h2>
+            <p style="color: #999; font-size: 1.1rem;">Locations</p>
+            <p style="color: #666; margin-top: 2rem;">Written by Ayla Demirci</p>
+            <p style="color: #666;">Nashville, Tennessee</p>
+            <p style="color: #666;">WGAe #I381209</p>
+            <p style="color: #666; margin-top: 2rem;">Contact: Aylamahree@Gmail.com | (615)485-5008</p>
+        </div>
+    </footer>
+
+</body>
+</html>
