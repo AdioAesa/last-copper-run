@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Copper Run - A Film Treatment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #0a0a0a;
+            color: #e8e8e8;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('IMG_5896.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(transparent, #0a0a0a);
+        }
+
+        .title {
+            font-size: 5rem;
+            font-weight: 300;
+            letter-spacing: 0.3rem;
+            color: #d4a574;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-shadow: 4px 4px 20px rgba(0,0,0,0.9);
+            animation: fadeInDown 1.5s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #c9c9c9;
+            font-style: italic;
+            letter-spacing: 0.2rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            animation: fadeInUp 1.5s ease 0.5s both;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #999;
+            margin-top: 2rem;
+            max-width: 700px;
+            animation: fadeIn 2s ease 1s both;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .section {
+            margin-bottom: 6rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #d4a574;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #c9c9c9;
+            text-align: center;
+        }
+
+        .image-banner {
+            width: 100%;
+            height: auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #000;
+            margin: 2rem 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            position: relative;
+            aspect-ratio: 16 / 9;
+        }
+
+        .image-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .column-image {
+            width: 100%;
+            height: 400px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #000;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .character {
+            background: #141414;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid #d4a574;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .character-name {
+            font-size: 1.8rem;
+            color: #d4a574;
+            margin-bottom: 0.5rem;
+        }
+
+        .character-description {
+            font-size: 1rem;
+            color: #999;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .quote {
+            background: #0f0f0f;
+            border-left: 5px solid #d4a574;
+            padding: 2rem;
+            margin: 3rem 0;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #b8b8b8;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #333;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            color: #d4a574;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            text-align: center;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #d4a574;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d4a574;
+            border: 3px solid #0a0a0a;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            color: #d4a574;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .parallax-section {
+            height: 500px;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 4rem 0;
+        }
+
+        .parallax-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .parallax-text {
+            font-size: 2.5rem;
+            color: #e8e8e8;
+            font-style: italic;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .theme-card {
+            background: #141414;
+            padding: 2rem;
+            border-top: 3px solid #d4a574;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.2);
+        }
+
+        .theme-title {
+            font-size: 1.5rem;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #000;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 2px solid #d4a574;
+        }
+
+        .credits {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            .image-banner {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1 class="title">The Last Copper Run</h1>
+        <p class="subtitle">A Film by Ayla Demirci</p>
+        <p class="tagline">When the government poisoned the whiskey, she carried the antidote on her back</p>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">Logline</h2>
+            <div class="section-content">
+                <p>In 1928 Appalachia, a pregnant mountain woman must transport her family's copper moonshine still sixty miles through treacherous terrain while pursued by a vengeful federal agent—a desperate race against time that will force her to choose between honoring her father's legacy and saving her own life.</p>
+            </div>
+        </div>
+
+        <div class="image-banner" style="background-image: url('IMG_5098.png');"></div>
+
+        <div class="section">
+            <h2 class="section-title">The Story</h2>
+            <div class="section-content">
+                <p><strong>THE LAST COPPER RUN</strong> opens in the predawn darkness of November 1928, where moonshine drips from copper coils like a heartbeat—clear as mountain water, deadly as sin. This is the world of the McCallisters, fourth-generation moonshiners whose copper stills produce the only safe liquor left in Appalachia.</p>
+
+                <p>When federal prohibition agents raid their still house, <strong>Abel McCallister</strong> makes a choice that will echo through the mountains: he throws his daughter a leather pouch containing forty-three dollars and commands her to run. Moments later, he attacks Agent Harlan Beck with boiling moonshine and copper, scarring the lawman's face before dying in a hail of gunfire.</p>
+
+                <p><strong>Birdie McCallister</strong>, twenty-four and secretly pregnant with her dead lover's child, returns to find her father's charred remains and her mother Ruth dying of consumption. Ruth reveals that the family's masterwork—a fifty-pound copper still worth two hundred dollars—is hidden in a cave. Birdie has forty-eight hours to deliver it to Jack Price in Knoxville before he leaves for Memphis. That money represents medicine, train fare west, and escape from the cycle of violence that killed both her father and her lover Tommy.</p>
+            </div>
+        </div>
+
+        <div class="quote">
+            "The copper is everything. Without copper, we're just people with corn mash. With copper, we're craftsmen. We're something."
+        </div>
+
+        <div class="section">
+            <div class="two-column">
+                <div>
+                    <h3 class="section-title">The Journey</h3>
+                    <p class="section-content">What follows is a visceral, physical odyssey through the Great Smoky Mountains—sixty miles of ridge trails, river crossings, and hidden paths known only to mountain people. Birdie carries the copper still strapped to her back, its weight crushing her shoulders, driving into her spine, testing the limits of human endurance.</p>
+                    <p class="section-content">She navigates by ridge lines and creek sounds and moss on tree trunks. She crosses the freezing Nolichucky River, nearly drowning when the copper pulls her under. She hides in chimneys, runs from ambushes, and walks through darkness guided by her father's ghost.</p>
+                </div>
+                <div class="column-image" style="background-image: url('IMG_6169.png');"></div>
+            </div>
+        </div>
+
+        <div class="parallax-section" style="background-image: url('IMG_1614.png');">
+            <div class="parallax-content">
+                <p class="parallax-text">"You hesitate, you die."</p>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="column-image" style="background-image: url('IMG_0019.png');"></div>
+            <div class="column-image" style="background-image: url('IMG_9786.png');"></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Historical Context: The Poisoning</h2>
+            <div class="section-content">
+                <p>THE LAST COPPER RUN is grounded in one of America's darkest chapters: between 1920 and 1933, the U.S. government deliberately poisoned industrial alcohol to deter bootlegging. The policy killed over 10,000 Americans and blinded thousands more.</p>
+
+                <p>The government added methanol, formaldehyde, and other deadly chemicals to industrial alcohol, knowing bootleggers would redistill it for consumption. When people drank it, they went blind, then suffered organ failure over days of agonizing screaming. The victims were predominantly poor, working-class Americans in Appalachia and urban areas.</p>
+
+                <p>This film tells their story through Birdie's journey. Her lover Tommy died from poisoned whiskey—three days of going blind, organs burning, body seizing. Her father's pure copper stills represented salvation: properly made moonshine was the only safe alcohol left. This wasn't just about breaking the law; it was about survival in the face of government-sanctioned murder.</p>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">10,000+</div>
+                <div class="stat-label">Deaths from Poisoned Alcohol</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">60</div>
+                <div class="stat-label">Miles Traveled</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">48</div>
+                <div class="stat-label">Hours to Survive</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">50 lbs</div>
+                <div class="stat-label">Copper Weight</div>
+            </div>
+        </div>
+
+        <div class="parallax-section" style="background-image: url('IMG_3823.png');">
+            <div class="parallax-content">
+                <p class="parallax-text">"We poisoned American citizens. On purpose."</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Key Sequences</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="timeline-title">The Raid (Day One - Predawn)</h3>
+                    <p class="section-content">Opening with the hypnotic drip of moonshine, we watch Abel test his work—blue flame, perfect. When federal agents surround the still house, Abel throws Birdie a pouch and commands her to run. He then attacks Beck with boiling copper and moonshine, scarring the agent's face before dying in a storm of gunfire. Birdie counts each shot from the forest. Six bullets. Her father is gone.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">The River Crossing (Day Two - Morning)</h3>
+                    <p class="section-content">The Nolichucky River runs fast and cold. Birdie strips to underclothes, wraps the copper in her coat, and wades in. The current tears at her. The copper pulls her under. She must choose: the copper or her life. She releases it, swims for the surface, gasping—only to find it caught on a branch in shallow water. Her father's ghost whispers: "Two feet to your left."</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">The Confrontation with Shaw (Day Three - Dawn)</h3>
+                    <p class="section-content">On Knoxville's outskirts, Virgil Shaw and his men ambush Birdie. He offers her a choice: surrender the copper and live, or fight and die. His son Wyatt warned her this was coming—Beck herded her right into Shaw's trap. She refuses. Runs. Bullets chase her into the river. She escapes, but barely.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Beck's Reckoning (Day Three - Morning)</h3>
+                    <p class="section-content">Dying from infection, Beck finally meets Birdie by the river. She tells him about Tommy—three days of screaming, dying from government poison. Beck's crusade collapses as he realizes he enforced policies that killed innocents. His final words to his men: "Tell them we killed them. Not the bootleggers. Us." He dies remembering their names.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-banner" style="background-image: url('IMG_2347.png');"></div>
+
+        <div class="section">
+            <h2 class="section-title">Themes</h2>
+
+            <div class="themes-grid">
+                <div class="theme-card">
+                    <h3 class="theme-title">Legacy vs. Survival</h3>
+                    <p class="section-content">Birdie's central conflict: honor her father's sacrifice by delivering the copper, or abandon it to save herself and her child. By the film's end, she delivers the copper but rejects what it represents. The copper is nothing. People are everything.</p>
+                </div>
+
+                <div class="theme-card">
+                    <h3 class="theme-title">The Cost of Principle</h3>
+                    <p class="section-content">Abel died for principle. Beck nearly died enforcing the law. Birdie chooses differently—she'll deliver the copper because it's the last thing she can do for her father, but then she's leaving. She won't die for pride disguised as principle.</p>
+                </div>
+
+                <div class="theme-card">
+                    <h3 class="theme-title">Government Violence</h3>
+                    <p class="section-content">The film unflinchingly depicts how Prohibition enforcement killed thousands of poor Americans through poisoned alcohol, federal raids, and economic starvation. It asks: who decides which laws are worth dying for?</p>
+                </div>
+
+                <div class="theme-card">
+                    <h3 class="theme-title">Appalachian Identity</h3>
+                    <p class="section-content">The mountains aren't romanticized—they're beautiful, brutal, and indifferent. Mountain culture is portrayed with respect: the copper craft represents generational knowledge, community survival, and resistance to outside control.</p>
+                </div>
+
+                <div class="theme-card">
+                    <h3 class="theme-title">Women's Autonomy</h3>
+                    <p class="section-content">Birdie is pregnant in an era and place where that fact could destroy her. She protects this secret fiercely, making choices about her body and her future that defy every man trying to control her—her father's ghost, Beck's paternalism, Shaw's violence.</p>
+                </div>
+
+                <div class="theme-card">
+                    <h3 class="theme-title">Breaking Cycles</h3>
+                    <p class="section-content">The epilogue shows older Birdie returning thirty years later to scatter her mother's ashes. She tells her daughter: "Your grandfather died for copper. I lived because I let it go." She broke the cycle and built something new.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote">
+            "The copper is nothing. We are everything."
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Visual Style</h2>
+            <div class="section-content">
+                <p><strong>THE LAST COPPER RUN</strong> demands visceral, grounded cinematography that puts the audience directly into Birdie's ordeal:</p>
+
+                <p><strong>Fog and darkness:</strong> The film lives in the gray zones—predawn mist, twilight forests, lamplight in still houses. Color palette: cold blues, copper oranges, charcoal blacks.</p>
+
+                <p><strong>Close physical detail:</strong> We see copper stains on hands, blood seeping through shirts, breath misting in cold air, the shine of moonshine catching lamplight. The camera stays intimate, making us feel every mile.</p>
+
+                <p><strong>Natural sound design:</strong> The drip of copper, the crunch of boots on frost, the roar of the river, the crack of rifles echoing through hollows. Minimal score, maximizing diegetic mountain sounds.</p>
+
+                <p><strong>Handheld intensity:</strong> During action sequences—the raid, the river crossing, the chase from Shaw's men—the camera becomes Birdie's POV, breathless and immediate.</p>
+
+                <p><strong>The mountains as character:</strong> We establish the Smokies as vast, indifferent, beautiful, and deadly. Ridge after ridge disappearing into fog. The endless weight of distance.</p>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="column-image" style="background-image: url('IMG_3775.png');"></div>
+            <div class="column-image" style="background-image: url('IMG_6396.png');"></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Why This Story Matters</h2>
+            <p class="subtitle" style="font-size: 1.5rem; color: #d4a574; font-style: italic; margin-bottom: 2rem; text-align: center;">THE LAST COPPER RUN resurrects a forgotten American atrocity.</p>
+            <div class="section-content">
+                <p>Between 1920 and 1933, the U.S. government poisoned over 10,000 of its own citizens in the name of enforcing Prohibition. Most victims were poor, rural, or working-class. Most of their names are lost to history.</p>
+
+                <p>This film is a memorial. It's also a reckoning with how governments rationalize violence against marginalized communities, how principle becomes tyranny, and how ordinary people resist.</p>
+
+                <p>But beyond the historical importance, this is a survival story about a woman refusing to carry her father's war. It's about breaking generational cycles. It's about choosing life over legacy.</p>
+
+                <p>In an era when we're re-examining government overreach, economic inequality, and who gets to decide which laws are just—THE LAST COPPER RUN feels urgent, necessary, and painfully relevant.</p>
+            </div>
+        </div>
+
+        <div class="parallax-section" style="background-image: url('IMG_9432.png');">
+            <div class="parallax-content">
+                <p class="parallax-text">"Most of their names are forgotten.<br>This story is for them."</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Tone & Comparcomp</h2>
+            <div class="section-content">
+                <p><strong>Winter's Bone</strong> – Gritty Appalachian realism, a young woman navigating a violent masculine world</p>
+                <p><strong>The Revenant</strong> – Visceral survival journey, man vs. nature, minimal dialogue maximizing physical storytelling</p>
+                <p><strong>No Country for Old Men</strong> – Moral ambiguity, the weight of violence, landscape as character</p>
+                <p><strong>Hell or High Water</strong> – Economic desperation driving crime, systems crushing individuals, elegy for a dying way of life</p>
+                <p><strong>Leave No Trace</strong> – Quiet intensity, father-daughter dynamics, choosing between legacy and self-preservation</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">The Final Image</h2>
+            <div class="section-content">
+                <p>Thirty years later, older Birdie stands on a mountain ridge with her daughter, scattering Ruth's ashes. The camera pulls back—two women on a ridge, the Smokies stretching forever behind them. Birdie hands her daughter a worn piece of paper: "The copper is nothing. We are everything."</p>
+
+                <p>They walk down the mountain together. Behind them, the sun sets over the ridges—orange and gold and fading purple. The mountains watch. Silent. Eternal. Indifferent.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2 style="color: #d4a574; font-size: 2rem; margin-bottom: 1rem;">THE LAST COPPER RUN</h2>
+            <p style="color: #999; font-size: 1.1rem;">A Film Treatment</p>
+            <p style="color: #666; margin-top: 2rem;">Written by Ayla Demirci</p>
+            <p class="credits">Nashville, Tennessee</p>
+            <p class="credits">WGAe #I381209</p>
+            <p class="credits" style="margin-top: 2rem;">Contact: Aylamahree@Gmail.com | (615)485-5008</p>
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333;">
+                <a href="character_breakdowns.html" style="color: #d4a574; text-decoration: none; font-size: 1.2rem; letter-spacing: 0.1rem; border: 2px solid #d4a574; padding: 1rem 2rem; display: inline-block; transition: all 0.3s ease;">Character Breakdowns →</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
